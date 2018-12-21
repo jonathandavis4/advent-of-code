@@ -7,10 +7,8 @@ with open('input.txt') as f:
 claimed_inches = {}
 
 for claim in input_data.split('\n'):
-    claim_id, x_min, y_min, width, height = re.match('^#(\d+) @ (\d+),(\d+): (\d+)x(\d+)$',
-        claim).groups()
-    claim_id, x_min, y_min, width, height = int(claim_id), int(x_min), int(y_min), int(width), int(
-        height)
+    claim_id, x_min, y_min, width, height = re.match('^#(\d+) @ (\d+),(\d+): (\d+)x(\d+)$', claim).groups()
+    claim_id, x_min, y_min, width, height = int(claim_id), int(x_min), int(y_min), int(width), int(height)
     
     for x in range(x_min, x_min + width):
         for y in range(y_min, y_min + height):
