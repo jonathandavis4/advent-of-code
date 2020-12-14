@@ -90,3 +90,7 @@ ENV/
 
 # Pycharm
 .idea
+
+# Compiled executables for each day.
+part_1
+part_2
