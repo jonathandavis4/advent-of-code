@@ -16,7 +16,7 @@ vector<string> get_input() {
     return strings;
 }
 
-int count_char_in_string(string str, string c) {
+int count_char_in_string(string &str, string &c) {
     if (str.length() == 0) {
         return 0;
     }
@@ -47,7 +47,7 @@ int main() {
         string password = match[4];
 
         int char_count = count_char_in_string(password, c);
-        
+
         if (min_count <= char_count && char_count <= max_count) {
             valid_password_count++;
         }
